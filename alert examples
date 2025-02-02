@@ -1,0 +1,31 @@
+// Click a button that triggers an alert
+
+driver.findElement(By.id("alertButton")).click();
+
+
+
+// Access the alert
+
+Alert alert = driver.switchTo().alert(); 
+
+
+
+// Get the alert text
+
+String alertMessage = alert.getText();
+
+
+
+// Accept the alert (click "OK")
+
+alert.accept(); 
+
+
+
+// If dealing with a nested alert:
+
+Alert nestedAlert = driver.switchTo().alert(); // Access the nested alert
+
+nestedAlert.sendKeys("Text for nested alert"); // Send text to the nested alert
+
+nestedAlert.accept(); // Accept the nested alert 

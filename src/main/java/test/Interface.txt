@@ -1,0 +1,20 @@
+ArryList:
+-----------
+can contains duplicate elemnts/values.
+class maintains insertion order
+syncronised
+allow random acess to fetch element bcoz based on index.
+
+
+
+
+
+
+
+LinkedList: - uses doubly linked list to store the elements.
+-------------
+can contains duplicate elemnts.
+linkedList class maintains insertion order
+non syncronised
+manipulation is fast bcoz no shoifting needs to occur
+used can be used as list and stack or queue.
