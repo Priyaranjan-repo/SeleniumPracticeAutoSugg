@@ -28,27 +28,29 @@ public class GoogleSerch {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("iphone ");
+		Thread.sleep(3000);
 
-		GoogleSerch.screenshotDemo();
+		GoogleSerch.getsSreenshot();
 		List<WebElement> list = driver.findElements(By.xpath("//div[@class='wM6W7d']/span"));
 
 		System.out.println(list.size());
 
 		for (int i = 0; i < list.size(); i++) {
 
-			// list.get(i).getText().trim();
+			String value = list.get(i).getText().trim();
 
-			System.out.println(list.get(i).getText().trim());
+			System.out.println(value);
 
 		}
 
 	}
 
-	public static void screenshotDemo() throws Exception {
+	public static void getsSreenshot() throws Exception {
 
 		try {
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File(".//screenshot/test1.png"));
+			FileUtils.copyFile(file, new File(".//screenshot/test2.png"));
+
 		} catch (WebDriverException e) {
 
 			e.printStackTrace();
